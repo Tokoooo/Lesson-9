@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3366ff;
+}
+
+header {
+    margin: 25px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container img {
+    width: 40px;
+    height: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 15px;
+}
+.grid-container > div {
+    background-color: #fff;
+}
+
+.masonryI {
+    grid-row: span 2;
+}
+
+.flexible-breadth {
+    grid-column: 1 / span 1;
+}
+
+.dom-order {
+    grid-column: 1 / span 1;
+}
+
+.responsive {
+    grid-column: span 1;
+}
+
+.fluid {
+    grid-column: 2 / span 1;
+}
+
+.masonryII {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.overlap {
+    grid-column: 3 / span 2;
+}
+
+.explicitly-placed {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    /*grid-area: 4 / 3 / 4 / 2;*/
+}
+
+.negative-space {
+    grid-column: 4 / span 1;
+}
+
+.masonryIII {
+    grid-column: 4 / span 1;
+}
+
+.named-tracks {
+    grid-column: 3 / span 2;
+}
+
+.grid-container .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
